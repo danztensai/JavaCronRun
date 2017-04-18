@@ -55,9 +55,10 @@ public class DBUtil {
 			pst1.setDouble(4, saldo_akhir4);
 			pst1.setString(5,Accounting.currentDatetime());
 			pst1.setInt(6, flag);
-			pst1.setString(8, kode_perk);
-			pst1.setInt(9, 0);
-			pst1.setString(10, tanggal);
+			pst1.setString(7, kode_perk);
+			pst1.setInt(8, 0);
+			pst1.setString(9, tanggal);
+			log.info("Run Query "+pst1.toString());
 			pst1.executeUpdate();
 			
 			
@@ -103,10 +104,10 @@ public class DBUtil {
 			pst1.setDouble(3, saldo_akhir3);
 			pst1.setDouble(4, saldo_akhir4);
 			pst1.setString(5,Accounting.currentDatetime());
-			pst1.setInt(6, flag);
-			pst1.setInt(8, id_perk);
-			pst1.setInt(9, 0);
-			pst1.setString(10, tanggal);
+			pst1.setInt(6, id_perk);
+			pst1.setInt(7, 0);
+			pst1.setString(8, tanggal);
+			log.info("Run Query "+pst1.toString());
 			pst1.executeUpdate();
 			
 			
@@ -133,6 +134,7 @@ public class DBUtil {
 		try {
 			pst1 = con1.prepareStatement(SqlQuery);
 			pst1.setString(1, Accounting.currentDate());
+			log.info("Run Query "+pst1.toString());
 			pst1.executeUpdate();
 			status = true;
 			
@@ -159,7 +161,7 @@ public class DBUtil {
 		try {
 			pst = con.prepareStatement(querySelect);
 			pst.setString(1, Accounting.currentDate());
-			
+			log.info("Run Query "+pst.toString());
 			ResultSet rs = pst.executeQuery();
 			while (rs.next())
 			{
@@ -192,6 +194,7 @@ public class DBUtil {
 			pst = con.prepareStatement(querySelect);
 			pst.setString(1, kodePerk);
 			pst.setString(2, dtm);
+			log.info("Run Query "+pst.toString());
 			ResultSet rs = pst.executeQuery();
 			while (rs.next())
 			{
@@ -215,12 +218,12 @@ public class DBUtil {
 		ConnectionManager conMan = new ConnectionManager();
 		Connection con = conMan.logOn();
 		PreparedStatement pst = null;
-		String querySelect ="select sum(debet) as debet,"
-				+ "sum(kredit) as kredit"
-				+ "from transaksi_detail"
-				+ "where kode_perk = ?"
+		String querySelect ="select sum(debet) as debet, "
+				+ "sum(kredit) as kredit "
+				+ "from transaksi_detail "
+				+ "where kode_perk = ? "
 				+ "and master_id in "
-				+ "(select trans_id from tansaksi_master where "
+				+ "(select trans_id from transaksi_master where "
 				+ "date (tgl_trans) < ?)";
 		
 		
@@ -231,7 +234,7 @@ public class DBUtil {
 			pst.setString(1, kode_perk);
 			pst.setString(2, tgl);
 			
-			
+			log.info("Run Query "+pst.toString());
 			ResultSet rs = pst.executeQuery();
 			while (rs.next())
 			{
@@ -261,11 +264,11 @@ public class DBUtil {
 		Connection con = conMan.logOn();
 		PreparedStatement pst = null;
 		String querySelect ="select sum(debet) as debet,"
-				+ "sum(kredit) as kredit"
-				+ "from transaksi_detail"
-				+ "where kode_perk = ?"
+				+ "sum(kredit) as kredit "
+				+ "from transaksi_detail "
+				+ "where kode_perk = ? "
 				+ "and master_id in "
-				+ "(select trans_id from tansaksi_master where "
+				+ "(select trans_id from transaksi_master where "
 				+ "date(tgl_trans) = ?)";
 		
 		
@@ -276,7 +279,7 @@ public class DBUtil {
 			pst.setString(1, kode_perk);
 			pst.setString(2, tgl);
 			
-			
+			log.info("Run Query "+pst.toString());
 			ResultSet rs = pst.executeQuery();
 			while (rs.next())
 			{
@@ -307,7 +310,7 @@ public class DBUtil {
 		Connection con = conMan.logOn();
 		PreparedStatement pst = null;
 		String querySelect ="SELECT KODE_PERK, ID_PERK, TYPE_PERK, "
-				+ "LEVEL_PERK,D_OR_K from "+TBL_NERACA_TEMP+""
+				+ "LEVEL_PERK,D_OR_K from "+TBL_NERACA_TEMP+" "
 				+ " WHERE dtm = "
 				+ "? AND G_OR_D=? AND flag =?";
 		
@@ -319,7 +322,7 @@ public class DBUtil {
 			pst.setString(1, dtm);
 			pst.setString(2, "D");
 			pst.setString(3, "0");
-			
+			log.info("Run Query "+pst.toString());
 			ResultSet rs = pst.executeQuery();
 			while (rs.next())
 			{
@@ -352,11 +355,11 @@ public class DBUtil {
 		ConnectionManager conMan = new ConnectionManager();
 		Connection con = conMan.logOn();
 		PreparedStatement pst = null;
-		String querySelect ="select sum(saldo_akhir1) as awal,"
-				+ "sum(saldo_akhir2) as debet,"
-				+ "sum(saldo_akhir3) as kredit"
-				+ "sum(saldo_akhir4) as akhir"
-				+ "from "+TBL_NERACA_TEMP+" where id_induk = ?";
+		String querySelect ="select sum(saldo_akhir1) as awal, "
+				+ "sum(saldo_akhir2) as debet, "
+				+ "sum(saldo_akhir3) as kredit, "
+				+ "sum(saldo_akhir4) as akhir "
+				+ "from "+TBL_NERACA_TEMP+" where id_induk = ? ";
 		
 		
 	
@@ -365,14 +368,12 @@ public class DBUtil {
 			pst = con.prepareStatement(querySelect);
 			pst.setInt(1, id_induk);
 			
-			
+			log.info("Run Query "+pst.toString());
 			ResultSet rs = pst.executeQuery();
 			while (rs.next())
 			{
 				Rep_neraca_harian_temp repModel = new Rep_neraca_harian_temp();
 				
-				repModel.setKode_perk(rs.getString("KODE_PERK"));
-				repModel.setId_perk(rs.getInt("ID_PERK"));
 				repModel.setSaldo_akhir1(rs.getDouble("awal"));
 				repModel.setSaldo_akhir2(rs.getDouble("debet"));
 				repModel.setSaldo_akhir3(rs.getDouble("kredit"));

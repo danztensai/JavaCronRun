@@ -36,18 +36,22 @@ public class Accounting {
 		List<Rep_neraca_harian_temp> repList = dbUtil.Perkiraan_by_gord(currentDate());
 
 		if (repList.size() > 0) {
+			log.info("Jumlah List Perkiraan_by_gord : "+repList.size());
+			int counter=1;
 			for (Rep_neraca_harian_temp rep : repList) {
-
+				log.info("List Ke "+counter);
+				process_by_kode_perk(transid, rep.getKode_perk(), currentDate(), String.valueOf(rep.getId_perk()));
+				counter++;
 			}
 
 		} else {
 			log.error("Something Wrong with Perkiraan by Gord with trxid " + transid);
-			System.exit(-1);
+		//	System.exit(-1);
 		}
 
 	}
 
-	public void process_by_kode_perk(String transid, String kodePerk, String tanggal, String id_perk) {
+	public static void process_by_kode_perk(String transid, String kodePerk, String tanggal, String id_perk) {
 
 		DBUtil dbUtil = new DBUtil();
 		List<Transaksi_detail> transDetail = dbUtil.trans_detail_saldo_awal(tanggal, kodePerk);
@@ -71,10 +75,11 @@ public class Accounting {
 
 		dbUtil.Update_temp_neraca_harian(count_saldo_awal, tday_deb, tday_kre, count_saldo_akhir, currentDatetime(), 1,
 				kodePerk, tanggal);
+		Process_by_idPerk(transid, tanggal, id_perk);
 
 	}
 
-	public void Process_by_idPerk(String trxid, String tanggal, String idPerk) {
+	public static void Process_by_idPerk(String trxid, String tanggal, String idPerk) {
 		DBUtil dbUtil = new DBUtil();
 		int id_induk = dbUtil.Perkiraan_idInduk_by_kdPerk(idPerk, tanggal);
 		List<Rep_neraca_harian_temp> repList = dbUtil.Trans_main_induk(id_induk);
@@ -123,7 +128,8 @@ public class Accounting {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(currentDatetime());
+		getNeracaHarian();
+	log.info("test");
 	}
 
 }
