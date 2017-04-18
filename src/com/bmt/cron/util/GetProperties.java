@@ -21,8 +21,19 @@ public class GetProperties
     String sidWapPush;
     String logSchStoryPlace;
     String checkLogStory;
+    String cronTab;
     
-    public String getLogSchStoryPlace() {
+    
+    
+    public String getCronTab() {
+		return cronTab;
+	}
+
+	public void setCronTab(String cronTab) {
+		this.cronTab = cronTab;
+	}
+
+	public String getLogSchStoryPlace() {
         return this.logSchStoryPlace;
     }
     
@@ -115,6 +126,7 @@ public class GetProperties
             this.setPort(prop.getProperty("port"));
             this.setLogSchStoryPlace(prop.getProperty("logSchStry"));
             this.setCheckLogStory(prop.getProperty("stringCheckPushedMT"));
+            
         }
         catch (FileNotFoundException e) {
             e.printStackTrace();

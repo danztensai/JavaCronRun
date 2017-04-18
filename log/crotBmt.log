@@ -103,3 +103,19 @@
 10:56:27,445  INFO Accounting:80 - count_saldo_akhir = count_saldo_awal + tday_deb : 29166000(29166000+0)
 10:56:28,215  INFO DBUtil:61 - Run Query Update_temp_neraca_harian : 0
 10:56:36,893  INFO DBUtil:197 - Run Query Perkiraan_idInduk_by_kdPerk : com.mysql.jdbc.JDBC4PreparedStatement@571a75a2: select ID_INDUK from rep_neraca_harian_temp where ID_PERK = '3929574' and dtm = '2017-04-18'
+11:21:05,312  INFO SimpleThreadPool:270 - Job execution threads will use class loader of thread: main
+11:21:05,326  INFO SchedulerSignalerImpl:60 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+11:21:05,344  INFO QuartzScheduler:222 - Quartz Scheduler v.1.8.4 created.
+11:21:05,346  INFO RAMJobStore:139 - RAMJobStore initialized.
+11:21:05,347  INFO QuartzScheduler:244 - Scheduler meta-data: Quartz Scheduler (v1.8.4) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+11:21:05,347  INFO StdSchedulerFactory:1280 - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+11:21:05,347  INFO StdSchedulerFactory:1284 - Quartz scheduler version: 1.8.4
+11:21:05,358  INFO MainBmtNeracaHarian:33 - DEFAULT.BmtAccountTaskJob Neraca Harian has been scheduled to run at: Wed Apr 19 00:00:00 ICT 2017 and repeat based on expression: 0 0 0 1/1 * ? *
+11:21:09,944  INFO UpdateChecker:86 - New Quartz update(s) found: 1.8.5 [http://www.terracotta.org/kit/reflector?kitID=default&pageID=QuartzChangeLog]
