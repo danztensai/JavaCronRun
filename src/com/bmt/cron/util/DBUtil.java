@@ -58,7 +58,7 @@ public class DBUtil {
 			pst1.setString(7, kode_perk);
 			pst1.setInt(8, 0);
 			pst1.setString(9, tanggal);
-			log.info("Run Query "+pst1.toString());
+			log.info("Run Query Update_temp_neraca_harian : "+pst1.toString());
 			pst1.executeUpdate();
 			
 			
@@ -104,10 +104,10 @@ public class DBUtil {
 			pst1.setDouble(3, saldo_akhir3);
 			pst1.setDouble(4, saldo_akhir4);
 			pst1.setString(5,Accounting.currentDatetime());
-			pst1.setInt(6, id_perk);
-			pst1.setInt(7, 0);
+			pst1.setInt(7, id_perk);
+			pst1.setInt(6, 0);
 			pst1.setString(8, tanggal);
-			log.info("Run Query "+pst1.toString());
+			log.info("Run Query Update_temp_neraca_harian_by_id_perk : "+pst1.toString());
 			pst1.executeUpdate();
 			
 			
@@ -134,7 +134,7 @@ public class DBUtil {
 		try {
 			pst1 = con1.prepareStatement(SqlQuery);
 			pst1.setString(1, Accounting.currentDate());
-			log.info("Run Query "+pst1.toString());
+			log.info("Run Query Ins_report_perkiran : "+pst1.toString());
 			pst1.executeUpdate();
 			status = true;
 			
@@ -161,7 +161,7 @@ public class DBUtil {
 		try {
 			pst = con.prepareStatement(querySelect);
 			pst.setString(1, Accounting.currentDate());
-			log.info("Run Query "+pst.toString());
+			log.info("Run Query countReportPerkiraan :"+pst.toString());
 			ResultSet rs = pst.executeQuery();
 			while (rs.next())
 			{
@@ -194,7 +194,7 @@ public class DBUtil {
 			pst = con.prepareStatement(querySelect);
 			pst.setString(1, kodePerk);
 			pst.setString(2, dtm);
-			log.info("Run Query "+pst.toString());
+			log.info("Run Query Perkiraan_idInduk_by_kdPerk : "+pst.toString());
 			ResultSet rs = pst.executeQuery();
 			while (rs.next())
 			{
@@ -234,7 +234,7 @@ public class DBUtil {
 			pst.setString(1, kode_perk);
 			pst.setString(2, tgl);
 			
-			log.info("Run Query "+pst.toString());
+			log.info("Run Query trans_detail_saldo_awal : "+pst.toString());
 			ResultSet rs = pst.executeQuery();
 			while (rs.next())
 			{
@@ -279,7 +279,7 @@ public class DBUtil {
 			pst.setString(1, kode_perk);
 			pst.setString(2, tgl);
 			
-			log.info("Run Query "+pst.toString());
+			log.info("Run Query trans_detail_dork : "+pst.toString());
 			ResultSet rs = pst.executeQuery();
 			while (rs.next())
 			{
@@ -322,7 +322,7 @@ public class DBUtil {
 			pst.setString(1, dtm);
 			pst.setString(2, "D");
 			pst.setString(3, "0");
-			log.info("Run Query "+pst.toString());
+			log.info("Run Query Perkiraan_by_gord "+pst.toString());
 			ResultSet rs = pst.executeQuery();
 			while (rs.next())
 			{

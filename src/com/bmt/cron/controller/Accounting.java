@@ -1,21 +1,18 @@
 package com.bmt.cron.controller;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.Random;
 
 import org.apache.log4j.Logger;
 
 import com.bmt.cron.model.Rep_neraca_harian_temp;
 import com.bmt.cron.model.Transaksi_detail;
-import com.bmt.cron.util.ConnectionManager;
 import com.bmt.cron.util.DBUtil;
-
-import sun.rmi.runtime.Log;
 
 public class Accounting {
 	static Logger log = Logger.getLogger(Accounting.class);
@@ -40,8 +37,12 @@ public class Accounting {
 			int counter=1;
 			for (Rep_neraca_harian_temp rep : repList) {
 				log.info("List Ke "+counter);
+				log.debug("Isi Rep_neraca_harian_temp "+rep.toString());
+				log.info("trxid : "+transid);
 				process_by_kode_perk(transid, rep.getKode_perk(), currentDate(), String.valueOf(rep.getId_perk()));
+				log.info("End Of List ke "+counter);
 				counter++;
+				
 			}
 
 		} else {
@@ -59,20 +60,25 @@ public class Accounting {
 		double awal_kre = 0;
 		double tday_deb = 0;
 		double tday_kre = 0;
-
+		DecimalFormat df = new DecimalFormat("0", DecimalFormatSymbols.getInstance(Locale.ENGLISH));
+		df.setMaximumFractionDigits(340);
 		for (Transaksi_detail td : transDetail) {
 			awal_deb = td.getDebet();
 			awal_kre = td.getKredit();
 		}
+		
 		List<Transaksi_detail> transDork = dbUtil.trans_detail_dork(tanggal, kodePerk);
 		for (Transaksi_detail td : transDork) {
 			tday_deb = td.getDebet();
 			tday_kre = td.getKredit();
 		}
-
+		log.info("Jumlah awal Deb : "+df.format(awal_deb)+" | awal Kre : "+df.format(awal_kre));
+		log.info("Jumlah tday_Deb : "+tday_deb+" | tday_Kre : "+tday_kre);
 		double count_saldo_awal = awal_deb - awal_kre;
+		log.info("count_saldo_awal = awal_deb-awal_kre : "+df.format(count_saldo_awal) +"("+df.format(awal_deb)+"-"+df.format(awal_kre)+")");
 		double count_saldo_akhir = count_saldo_awal + tday_deb;
-
+		log.info("count_saldo_akhir = count_saldo_awal + tday_deb : "+df.format(count_saldo_akhir) +"("+df.format(count_saldo_awal)+"+"+df.format(tday_deb)+")");
+		
 		dbUtil.Update_temp_neraca_harian(count_saldo_awal, tday_deb, tday_kre, count_saldo_akhir, currentDatetime(), 1,
 				kodePerk, tanggal);
 		Process_by_idPerk(transid, tanggal, id_perk);
@@ -84,9 +90,10 @@ public class Accounting {
 		int id_induk = dbUtil.Perkiraan_idInduk_by_kdPerk(idPerk, tanggal);
 		List<Rep_neraca_harian_temp> repList = dbUtil.Trans_main_induk(id_induk);
 		for (Rep_neraca_harian_temp rp : repList) {
+			
 			dbUtil.Update_temp_neraca_harian_by_id_perk(rp.getSaldo_akhir1(), rp.getSaldo_akhir2(),
-					rp.getSaldo_akhir3(), rp.getSaldo_akhir4(), currentDatetime(), 1, id_induk, tanggal);
-			log.info("Transid " + trxid + "| Perkiraan");
+					rp.getSaldo_akhir3(), rp.getSaldo_akhir4(), currentDatetime(), 1, Integer.parseInt(idPerk), tanggal);
+			
 		}
 
 	}
