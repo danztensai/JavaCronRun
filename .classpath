@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/Danz/Documents/Indosis/LibSchStory/c3p0-0.9.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Danz/Documents/Indosis/LibSchStory/commons-lang3-3.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Danz/Documents/Indosis/LibSchStory/gson-2.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Danz/Documents/Indosis/LibSchStory/joda-time-2.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Danz/Documents/Indosis/LibSchStory/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Danz/Documents/Indosis/LibSchStory/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Danz/Documents/Indosis/LibSchStory/log4j-1.2.16_2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Danz/Documents/Indosis/LibSchStory/mysql-connector-java-5.1.13-bin.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Danz/Documents/Indosis/LibSchStory/netty-3.5.11.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Danz/Documents/Indosis/LibSchStory/netty-3.5.11.Final-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Danz/Documents/Indosis/LibSchStory/quartz-all-1.8.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Danz/Documents/Indosis/LibSchStory/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Danz/Documents/Indosis/LibSchStory/slf4j-log4j12-1.6.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
