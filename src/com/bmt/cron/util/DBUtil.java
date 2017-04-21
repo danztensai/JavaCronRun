@@ -392,5 +392,36 @@ public class DBUtil {
 		
 	}
 	
-
+	public boolean Saldo_dk(String kodePerk,String tanggal)
+	{
+		
+		
+		ConnectionManager conMan1 = new ConnectionManager();
+		Connection con1 = conMan1.logOn();
+		PreparedStatement pst1 = null;
+		boolean status = true;
+		String SqlQuery ="call Neraca_harian_saldo_dk(?,?)";
+		try {
+			pst1 = con1.prepareStatement(SqlQuery);
+			
+			
+			pst1.setString(1, kodePerk);
+			pst1.setString(2, tanggal);
+			
+			log.info("Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : "+pst1.toString());
+			pst1.executeUpdate();
+			
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			status=false;
+		}finally{
+			closePreparedStatement(pst1);
+			conMan1.logOff();
+		}
+		return status;
+	
+		
+	}
 }
