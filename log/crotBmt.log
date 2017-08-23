@@ -1,113 +1,8 @@
-10:12:42,353  INFO DBUtil:164 - Run Query com.mysql.jdbc.JDBC4PreparedStatement@58ecb281: select count(*) as total from rep_neraca_harian_temp where dtm = '2017-04-18'
-10:12:43,802  INFO DBUtil:325 - Run Query com.mysql.jdbc.JDBC4PreparedStatement@6719dc16: SELECT KODE_PERK, ID_PERK, TYPE_PERK, LEVEL_PERK,D_OR_K from rep_neraca_harian_temp  WHERE dtm = '2017-04-18' AND G_OR_D='D' AND flag ='0'
-10:12:43,924  INFO Accounting:36 - Jumlah List Perkiraan_by_gord : 17
-10:12:43,924  INFO Accounting:39 - List Ke 1
-10:12:43,924  INFO Accounting:40 - Rep_neraca_harian_temp [tid=0, dtm=null, kode_perk=548, kode_induk=null, type_perk=BIAYA, level_perk=1, id_perk=3577675, id_induk=0, g_or_d=null, saldo_akhir1=0.0, saldo_akhir2=0.0, saldo_akhir3=0.0, saldo_akhir4=0.0, saldo_akhir5=0.0, saldo_akhir6=0.0, saldo_akhir7=0.0, saldo_akhir8=0.0, saldo_akhir9=0.0, saldo_akhir10=0.0, D_or_K=null, flag=0, flag_last_upd=null, flagDesc=null]
-10:12:44,840  INFO DBUtil:237 - Run Query com.mysql.jdbc.JDBC4PreparedStatement@73901437: select sum(debet) as debet, sum(kredit) as kredit from transaksi_detail where kode_perk = '548' and master_id in (select trans_id from transaksi_master where date (tgl_trans) < '2017-04-18')
-10:12:45,160  INFO Accounting:66 - Jumlah awal Deb : 37819209 | awal Kre : 37819209
-10:12:46,009  INFO DBUtil:282 - Run Query com.mysql.jdbc.JDBC4PreparedStatement@2b20bf2c: select sum(debet) as debet,sum(kredit) as kredit from transaksi_detail where kode_perk = '548' and master_id in (select trans_id from transaksi_master where date(tgl_trans) = '2017-04-18')
-10:12:46,338  INFO Accounting:73 - Jumlah tday_Deb : 0.0 | tday_Kre : 0.0
-10:12:46,338  INFO Accounting:75 - count_saldo_awal = awal_deb-awal_kre : 0(37819209-37819209)
-10:12:46,338  INFO Accounting:77 - count_saldo_akhir = count_saldo_awal + tday_deb : 0(0+0)
-10:12:47,707  INFO DBUtil:61 - Run Query com.mysql.jdbc.JDBC4PreparedStatement@5d5bdc50: update rep_neraca_harian_temp set saldo_akhir1 = 0.0 ,saldo_akhir2 = 0.0 ,saldo_akhir3 = 0.0 ,saldo_akhir4 = 0.0 ,flag_last_upd = '2017-04-18 10:12:47' ,flag = 1 where kode_perk = '548' and flag = 0 and dtm = '2017-04-18' 
-10:12:48,574  INFO DBUtil:197 - Run Query com.mysql.jdbc.JDBC4PreparedStatement@e60e128: select ID_INDUK from rep_neraca_harian_temp where ID_PERK = '3577675' and dtm = '2017-04-18'
-10:12:49,365  INFO DBUtil:371 - Run Query com.mysql.jdbc.JDBC4PreparedStatement@2f833eca: select sum(saldo_akhir1) as awal, sum(saldo_akhir2) as debet, sum(saldo_akhir3) as kredit, sum(saldo_akhir4) as akhir from rep_neraca_harian_temp where id_induk = 5 
-10:12:49,429  INFO Accounting:90 - Transid 2017041820639556917196| Perkiraan
-10:12:50,175  INFO DBUtil:110 - Run Query com.mysql.jdbc.JDBC4PreparedStatement@1de4f7c2: update rep_neraca_harian_temp set saldo_akhir1 = 8.133893547E+8 ,saldo_akhir2 = 0.0 ,saldo_akhir3 = 0.0 ,saldo_akhir4 = 8.133893547E+8 ,flag_last_upd = '2017-04-18 10:12:50' ,flag = 5 where ID_PERK = 0 and dtm = '2017-04-18' 
-10:12:50,256  INFO Accounting:39 - List Ke 2
-10:12:50,256  INFO Accounting:40 - Rep_neraca_harian_temp [tid=0, dtm=null, kode_perk=549, kode_induk=null, type_perk=BIAYA, level_perk=1, id_perk=3629249, id_induk=0, g_or_d=null, saldo_akhir1=0.0, saldo_akhir2=0.0, saldo_akhir3=0.0, saldo_akhir4=0.0, saldo_akhir5=0.0, saldo_akhir6=0.0, saldo_akhir7=0.0, saldo_akhir8=0.0, saldo_akhir9=0.0, saldo_akhir10=0.0, D_or_K=null, flag=0, flag_last_upd=null, flagDesc=null]
-10:12:51,012  INFO DBUtil:237 - Run Query com.mysql.jdbc.JDBC4PreparedStatement@24f9fdc: select sum(debet) as debet, sum(kredit) as kredit from transaksi_detail where kode_perk = '549' and master_id in (select trans_id from transaksi_master where date (tgl_trans) < '2017-04-18')
-10:16:56,867  INFO DBUtil:164 - Run Query com.mysql.jdbc.JDBC4PreparedStatement@9c0ec97: select count(*) as total from rep_neraca_harian_temp where dtm = '2017-04-18'
-10:17:00,206  INFO DBUtil:325 - Run Query com.mysql.jdbc.JDBC4PreparedStatement@b6e39f: SELECT KODE_PERK, ID_PERK, TYPE_PERK, LEVEL_PERK,D_OR_K from rep_neraca_harian_temp  WHERE dtm = '2017-04-18' AND G_OR_D='D' AND flag ='0'
-10:17:00,432  INFO Accounting:36 - Jumlah List Perkiraan_by_gord : 16
-10:17:00,433  INFO Accounting:39 - List Ke 1
-10:17:00,433  INFO Accounting:40 - Rep_neraca_harian_temp [tid=0, dtm=null, kode_perk=549, kode_induk=null, type_perk=BIAYA, level_perk=1, id_perk=3629249, id_induk=0, g_or_d=null, saldo_akhir1=0.0, saldo_akhir2=0.0, saldo_akhir3=0.0, saldo_akhir4=0.0, saldo_akhir5=0.0, saldo_akhir6=0.0, saldo_akhir7=0.0, saldo_akhir8=0.0, saldo_akhir9=0.0, saldo_akhir10=0.0, D_or_K=null, flag=0, flag_last_upd=null, flagDesc=null]
-10:17:02,478  INFO DBUtil:237 - Run Query com.mysql.jdbc.JDBC4PreparedStatement@7e78fc6: select sum(debet) as debet, sum(kredit) as kredit from transaksi_detail where kode_perk = '549' and master_id in (select trans_id from transaksi_master where date (tgl_trans) < '2017-04-18')
-10:17:02,822  INFO Accounting:66 - Jumlah awal Deb : 87685000 | awal Kre : 56360000
-10:17:04,370  INFO DBUtil:282 - Run Query com.mysql.jdbc.JDBC4PreparedStatement@175093f1: select sum(debet) as debet,sum(kredit) as kredit from transaksi_detail where kode_perk = '549' and master_id in (select trans_id from transaksi_master where date(tgl_trans) = '2017-04-18')
-10:17:04,744  INFO Accounting:73 - Jumlah tday_Deb : 0.0 | tday_Kre : 0.0
-10:17:04,744  INFO Accounting:75 - count_saldo_awal = awal_deb-awal_kre : 31325000(87685000-56360000)
-10:17:04,744  INFO Accounting:77 - count_saldo_akhir = count_saldo_awal + tday_deb : 31325000(31325000+0)
-10:17:07,086  INFO DBUtil:61 - Run Query com.mysql.jdbc.JDBC4PreparedStatement@2353f67e: update rep_neraca_harian_temp set saldo_akhir1 = 3.1325E+7 ,saldo_akhir2 = 0.0 ,saldo_akhir3 = 0.0 ,saldo_akhir4 = 3.1325E+7 ,flag_last_upd = '2017-04-18 10:17:07' ,flag = 1 where kode_perk = '549' and flag = 0 and dtm = '2017-04-18' 
-10:17:08,010  INFO DBUtil:197 - Run Query com.mysql.jdbc.JDBC4PreparedStatement@5c07f4ec: select ID_INDUK from rep_neraca_harian_temp where ID_PERK = '3629249' and dtm = '2017-04-18'
-10:17:08,848  INFO DBUtil:371 - Run Query com.mysql.jdbc.JDBC4PreparedStatement@144aa0ce: select sum(saldo_akhir1) as awal, sum(saldo_akhir2) as debet, sum(saldo_akhir3) as kredit, sum(saldo_akhir4) as akhir from rep_neraca_harian_temp where id_induk = 5 
-10:17:08,906  INFO Accounting:90 - Transid 2017041884733095618037| Perkiraan
-10:17:09,683  INFO DBUtil:110 - Run Query com.mysql.jdbc.JDBC4PreparedStatement@6860991f: update rep_neraca_harian_temp set saldo_akhir1 = 8.447143547E+8 ,saldo_akhir2 = 0.0 ,saldo_akhir3 = 0.0 ,saldo_akhir4 = 8.447143547E+8 ,flag_last_upd = '2017-04-18 10:17:09' ,flag = 3629249 where ID_PERK = 0 and dtm = '2017-04-18' 
-10:17:09,790  INFO Accounting:39 - List Ke 2
-10:17:09,790  INFO Accounting:40 - Rep_neraca_harian_temp [tid=0, dtm=null, kode_perk=550, kode_induk=null, type_perk=BIAYA, level_perk=1, id_perk=3629519, id_induk=0, g_or_d=null, saldo_akhir1=0.0, saldo_akhir2=0.0, saldo_akhir3=0.0, saldo_akhir4=0.0, saldo_akhir5=0.0, saldo_akhir6=0.0, saldo_akhir7=0.0, saldo_akhir8=0.0, saldo_akhir9=0.0, saldo_akhir10=0.0, D_or_K=null, flag=0, flag_last_upd=null, flagDesc=null]
-10:17:10,632  INFO DBUtil:237 - Run Query com.mysql.jdbc.JDBC4PreparedStatement@309cbd4b: select sum(debet) as debet, sum(kredit) as kredit from transaksi_detail where kode_perk = '550' and master_id in (select trans_id from transaksi_master where date (tgl_trans) < '2017-04-18')
-10:17:10,973  INFO Accounting:66 - Jumlah awal Deb : 21667825 | awal Kre : 11122851
-10:17:12,289  INFO DBUtil:282 - Run Query com.mysql.jdbc.JDBC4PreparedStatement@fcfa52: select sum(debet) as debet,sum(kredit) as kredit from transaksi_detail where kode_perk = '550' and master_id in (select trans_id from transaksi_master where date(tgl_trans) = '2017-04-18')
-10:46:35,087  INFO DBUtil:164 - Run Query com.mysql.jdbc.JDBC4PreparedStatement@58ecb281: select count(*) as total from rep_neraca_harian_temp where dtm = '2017-04-18'
-10:46:35,819  INFO DBUtil:325 - Run Query com.mysql.jdbc.JDBC4PreparedStatement@6719dc16: SELECT KODE_PERK, ID_PERK, TYPE_PERK, LEVEL_PERK,D_OR_K from rep_neraca_harian_temp  WHERE dtm = '2017-04-18' AND G_OR_D='D' AND flag ='0'
-10:46:35,881  INFO Accounting:36 - Jumlah List Perkiraan_by_gord : 15
-10:46:35,881  INFO Accounting:39 - List Ke 1
-10:46:35,882  INFO Accounting:40 - Rep_neraca_harian_temp [tid=0, dtm=null, kode_perk=550, kode_induk=null, type_perk=BIAYA, level_perk=1, id_perk=3629519, id_induk=0, g_or_d=null, saldo_akhir1=0.0, saldo_akhir2=0.0, saldo_akhir3=0.0, saldo_akhir4=0.0, saldo_akhir5=0.0, saldo_akhir6=0.0, saldo_akhir7=0.0, saldo_akhir8=0.0, saldo_akhir9=0.0, saldo_akhir10=0.0, D_or_K=null, flag=0, flag_last_upd=null, flagDesc=null]
-10:46:36,788  INFO DBUtil:237 - Run Query com.mysql.jdbc.JDBC4PreparedStatement@73901437: select sum(debet) as debet, sum(kredit) as kredit from transaksi_detail where kode_perk = '550' and master_id in (select trans_id from transaksi_master where date (tgl_trans) < '2017-04-18')
-10:46:36,910  INFO Accounting:66 - Jumlah awal Deb : 21667825 | awal Kre : 11122851
-10:46:38,200  INFO DBUtil:282 - Run Query com.mysql.jdbc.JDBC4PreparedStatement@2b20bf2c: select sum(debet) as debet,sum(kredit) as kredit from transaksi_detail where kode_perk = '550' and master_id in (select trans_id from transaksi_master where date(tgl_trans) = '2017-04-18')
-10:46:38,594  INFO Accounting:73 - Jumlah tday_Deb : 0.0 | tday_Kre : 0.0
-10:46:38,595  INFO Accounting:75 - count_saldo_awal = awal_deb-awal_kre : 10544974(21667825-11122851)
-10:46:38,595  INFO Accounting:77 - count_saldo_akhir = count_saldo_awal + tday_deb : 10544974(10544974+0)
-10:46:39,508  INFO DBUtil:61 - Run Query com.mysql.jdbc.JDBC4PreparedStatement@2353f67e: update rep_neraca_harian_temp set saldo_akhir1 = 1.0544974E+7 ,saldo_akhir2 = 0.0 ,saldo_akhir3 = 0.0 ,saldo_akhir4 = 1.0544974E+7 ,flag_last_upd = '2017-04-18 10:46:39' ,flag = 1 where kode_perk = '550' and flag = 0 and dtm = '2017-04-18' 
-10:46:40,623  INFO DBUtil:197 - Run Query com.mysql.jdbc.JDBC4PreparedStatement@e60e128: select ID_INDUK from rep_neraca_harian_temp where ID_PERK = '3629519' and dtm = '2017-04-18'
-10:46:41,455  INFO DBUtil:371 - Run Query com.mysql.jdbc.JDBC4PreparedStatement@2f833eca: select sum(saldo_akhir1) as awal, sum(saldo_akhir2) as debet, sum(saldo_akhir3) as kredit, sum(saldo_akhir4) as akhir from rep_neraca_harian_temp where id_induk = 5 
-10:46:41,529  INFO Accounting:90 - Transid 2017041897348308567071| Perkiraan | id_perk3629519
-10:55:48,925  INFO DBUtil:164 - Run Query countReportPerkiraan :com.mysql.jdbc.JDBC4PreparedStatement@1bbb60c3: select count(*) as total from rep_neraca_harian_temp where dtm = '2017-04-18'
-10:55:50,054  INFO DBUtil:325 - Run Query Perkiraan_by_gord com.mysql.jdbc.JDBC4PreparedStatement@52c05d3b: SELECT KODE_PERK, ID_PERK, TYPE_PERK, LEVEL_PERK,D_OR_K from rep_neraca_harian_temp  WHERE dtm = '2017-04-18' AND G_OR_D='D' AND flag ='0'
-10:55:50,171  INFO Accounting:36 - Jumlah List Perkiraan_by_gord : 14
-10:55:50,171  INFO Accounting:39 - List Ke 1
-10:55:50,172  INFO Accounting:41 - trxid : 2017041803712952975286
-10:55:50,931  INFO DBUtil:237 - Run Query trans_detail_saldo_awal : com.mysql.jdbc.JDBC4PreparedStatement@781f6226: select sum(debet) as debet, sum(kredit) as kredit from transaksi_detail where kode_perk = '551' and master_id in (select trans_id from transaksi_master where date (tgl_trans) < '2017-04-18')
-10:55:52,246  INFO DBUtil:282 - Run Query trans_detail_dork : com.mysql.jdbc.JDBC4PreparedStatement@2b20bf2c: select sum(debet) as debet,sum(kredit) as kredit from transaksi_detail where kode_perk = '551' and master_id in (select trans_id from transaksi_master where date(tgl_trans) = '2017-04-18')
-10:55:52,611  INFO Accounting:74 - Jumlah awal Deb : 6207500 | awal Kre : 4505000
-10:55:52,611  INFO Accounting:75 - Jumlah tday_Deb : 0.0 | tday_Kre : 0.0
-10:55:52,611  INFO Accounting:77 - count_saldo_awal = awal_deb-awal_kre : 1702500(6207500-4505000)
-10:55:52,611  INFO Accounting:79 - count_saldo_akhir = count_saldo_awal + tday_deb : 1702500(1702500+0)
-10:55:53,426  INFO DBUtil:61 - Run Query Update_temp_neraca_harian : 0
-10:55:54,160  INFO DBUtil:197 - Run Query Perkiraan_idInduk_by_kdPerk : com.mysql.jdbc.JDBC4PreparedStatement@2e958bb8: select ID_INDUK from rep_neraca_harian_temp where ID_PERK = '3643781' and dtm = '2017-04-18'
-10:55:55,056  INFO DBUtil:371 - Run Query com.mysql.jdbc.JDBC4PreparedStatement@518f5824: select sum(saldo_akhir1) as awal, sum(saldo_akhir2) as debet, sum(saldo_akhir3) as kredit, sum(saldo_akhir4) as akhir from rep_neraca_harian_temp where id_induk = 5 
-10:55:56,190  INFO DBUtil:110 - Run Query Update_temp_neraca_harian_by_id_perk : com.mysql.jdbc.JDBC4PreparedStatement@2345f0e3: update rep_neraca_harian_temp set saldo_akhir1 = 8.569618287E+8 ,saldo_akhir2 = 0.0 ,saldo_akhir3 = 0.0 ,saldo_akhir4 = 8.569618287E+8 ,flag_last_upd = '2017-04-18 10:55:56' ,flag = 0 where ID_PERK = 3643781 and dtm = '2017-04-18' 
-10:55:56,256  INFO Accounting:44 - End Of List ke 2
-10:55:56,257  INFO Accounting:39 - List Ke 2
-10:55:56,257  INFO Accounting:41 - trxid : 2017041803712952975286
-10:55:58,436  INFO DBUtil:237 - Run Query trans_detail_saldo_awal : com.mysql.jdbc.JDBC4PreparedStatement@398825b3: select sum(debet) as debet, sum(kredit) as kredit from transaksi_detail where kode_perk = '552' and master_id in (select trans_id from transaksi_master where date (tgl_trans) < '2017-04-18')
-10:56:01,408  INFO DBUtil:282 - Run Query trans_detail_dork : com.mysql.jdbc.JDBC4PreparedStatement@1f8b81e3: select sum(debet) as debet,sum(kredit) as kredit from transaksi_detail where kode_perk = '552' and master_id in (select trans_id from transaksi_master where date(tgl_trans) = '2017-04-18')
-10:56:01,764  INFO Accounting:74 - Jumlah awal Deb : 59166000 | awal Kre : 30000000
-10:56:01,764  INFO Accounting:75 - Jumlah tday_Deb : 0.0 | tday_Kre : 0.0
-10:56:01,764  INFO Accounting:77 - count_saldo_awal = awal_deb-awal_kre : 29166000(59166000-30000000)
-10:56:01,764  INFO Accounting:79 - count_saldo_akhir = count_saldo_awal + tday_deb : 29166000(29166000+0)
-10:56:16,754  INFO DBUtil:164 - Run Query countReportPerkiraan :com.mysql.jdbc.JDBC4PreparedStatement@9c0ec97: select count(*) as total from rep_neraca_harian_temp where dtm = '2017-04-18'
-10:56:18,183  INFO DBUtil:325 - Run Query Perkiraan_by_gord com.mysql.jdbc.JDBC4PreparedStatement@b6e39f: SELECT KODE_PERK, ID_PERK, TYPE_PERK, LEVEL_PERK,D_OR_K from rep_neraca_harian_temp  WHERE dtm = '2017-04-18' AND G_OR_D='D' AND flag ='0'
-10:56:18,287  INFO Accounting:36 - Jumlah List Perkiraan_by_gord : 14
-10:56:18,287  INFO Accounting:39 - List Ke 1
-10:56:18,288  INFO Accounting:41 - trxid : 2017041812327935980111
-10:56:20,044  INFO DBUtil:237 - Run Query trans_detail_saldo_awal : com.mysql.jdbc.JDBC4PreparedStatement@7e78fc6: select sum(debet) as debet, sum(kredit) as kredit from transaksi_detail where kode_perk = '551' and master_id in (select trans_id from transaksi_master where date (tgl_trans) < '2017-04-18')
-10:56:21,713  INFO DBUtil:282 - Run Query trans_detail_dork : com.mysql.jdbc.JDBC4PreparedStatement@214a55f2: select sum(debet) as debet,sum(kredit) as kredit from transaksi_detail where kode_perk = '551' and master_id in (select trans_id from transaksi_master where date(tgl_trans) = '2017-04-18')
-10:56:21,776  INFO Accounting:75 - Jumlah awal Deb : 6207500 | awal Kre : 4505000
-10:56:21,776  INFO Accounting:76 - Jumlah tday_Deb : 0.0 | tday_Kre : 0.0
-10:56:21,776  INFO Accounting:78 - count_saldo_awal = awal_deb-awal_kre : 1702500(6207500-4505000)
-10:56:21,776  INFO Accounting:80 - count_saldo_akhir = count_saldo_awal + tday_deb : 1702500(1702500+0)
-10:56:23,114  INFO DBUtil:61 - Run Query Update_temp_neraca_harian : 0
-10:56:23,983  INFO DBUtil:197 - Run Query Perkiraan_idInduk_by_kdPerk : com.mysql.jdbc.JDBC4PreparedStatement@ed42d08: select ID_INDUK from rep_neraca_harian_temp where ID_PERK = '3643781' and dtm = '2017-04-18'
-10:56:24,817  INFO DBUtil:371 - Run Query com.mysql.jdbc.JDBC4PreparedStatement@144aa0ce: select sum(saldo_akhir1) as awal, sum(saldo_akhir2) as debet, sum(saldo_akhir3) as kredit, sum(saldo_akhir4) as akhir from rep_neraca_harian_temp where id_induk = 5 
-10:56:25,766  INFO DBUtil:110 - Run Query Update_temp_neraca_harian_by_id_perk : com.mysql.jdbc.JDBC4PreparedStatement@6860991f: update rep_neraca_harian_temp set saldo_akhir1 = 8.569618287E+8 ,saldo_akhir2 = 0.0 ,saldo_akhir3 = 0.0 ,saldo_akhir4 = 8.569618287E+8 ,flag_last_upd = '2017-04-18 10:56:25' ,flag = 0 where ID_PERK = 3643781 and dtm = '2017-04-18' 
-10:56:25,877  INFO Accounting:43 - End Of List ke 1
-10:56:25,879  INFO Accounting:39 - List Ke 2
-10:56:25,879  INFO Accounting:41 - trxid : 2017041812327935980111
-10:56:26,624  INFO DBUtil:237 - Run Query trans_detail_saldo_awal : com.mysql.jdbc.JDBC4PreparedStatement@309cbd4b: select sum(debet) as debet, sum(kredit) as kredit from transaksi_detail where kode_perk = '552' and master_id in (select trans_id from transaksi_master where date (tgl_trans) < '2017-04-18')
-10:56:27,364  INFO DBUtil:282 - Run Query trans_detail_dork : com.mysql.jdbc.JDBC4PreparedStatement@fcfa52: select sum(debet) as debet,sum(kredit) as kredit from transaksi_detail where kode_perk = '552' and master_id in (select trans_id from transaksi_master where date(tgl_trans) = '2017-04-18')
-10:56:27,445  INFO Accounting:75 - Jumlah awal Deb : 59166000 | awal Kre : 30000000
-10:56:27,445  INFO Accounting:76 - Jumlah tday_Deb : 0.0 | tday_Kre : 0.0
-10:56:27,445  INFO Accounting:78 - count_saldo_awal = awal_deb-awal_kre : 29166000(59166000-30000000)
-10:56:27,445  INFO Accounting:80 - count_saldo_akhir = count_saldo_awal + tday_deb : 29166000(29166000+0)
-10:56:28,215  INFO DBUtil:61 - Run Query Update_temp_neraca_harian : 0
-10:56:36,893  INFO DBUtil:197 - Run Query Perkiraan_idInduk_by_kdPerk : com.mysql.jdbc.JDBC4PreparedStatement@571a75a2: select ID_INDUK from rep_neraca_harian_temp where ID_PERK = '3929574' and dtm = '2017-04-18'
-11:21:05,312  INFO SimpleThreadPool:270 - Job execution threads will use class loader of thread: main
-11:21:05,326  INFO SchedulerSignalerImpl:60 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-11:21:05,344  INFO QuartzScheduler:222 - Quartz Scheduler v.1.8.4 created.
-11:21:05,346  INFO RAMJobStore:139 - RAMJobStore initialized.
-11:21:05,347  INFO QuartzScheduler:244 - Scheduler meta-data: Quartz Scheduler (v1.8.4) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+18:49:31,207  INFO SimpleThreadPool:270 - Job execution threads will use class loader of thread: main
+18:49:31,225  INFO SchedulerSignalerImpl:60 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+18:49:31,227  INFO QuartzScheduler:222 - Quartz Scheduler v.1.8.4 created.
+18:49:31,229  INFO RAMJobStore:139 - RAMJobStore initialized.
+18:49:31,230  INFO QuartzScheduler:244 - Scheduler meta-data: Quartz Scheduler (v1.8.4) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -115,7 +10,201 @@
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-11:21:05,347  INFO StdSchedulerFactory:1280 - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
-11:21:05,347  INFO StdSchedulerFactory:1284 - Quartz scheduler version: 1.8.4
-11:21:05,358  INFO MainBmtNeracaHarian:33 - DEFAULT.BmtAccountTaskJob Neraca Harian has been scheduled to run at: Wed Apr 19 00:00:00 ICT 2017 and repeat based on expression: 0 0 0 1/1 * ? *
-11:21:09,944  INFO UpdateChecker:86 - New Quartz update(s) found: 1.8.5 [http://www.terracotta.org/kit/reflector?kitID=default&pageID=QuartzChangeLog]
+18:49:31,230  INFO StdSchedulerFactory:1280 - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+18:49:31,231  INFO StdSchedulerFactory:1284 - Quartz scheduler version: 1.8.4
+18:49:33,263  INFO UpdateChecker:86 - New Quartz update(s) found: 1.8.5 [http://www.terracotta.org/kit/reflector?kitID=default&pageID=QuartzChangeLog]
+18:50:44,346  INFO SimpleThreadPool:270 - Job execution threads will use class loader of thread: main
+18:50:44,360  INFO SchedulerSignalerImpl:60 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+18:50:44,360  INFO QuartzScheduler:222 - Quartz Scheduler v.1.8.4 created.
+18:50:44,363  INFO RAMJobStore:139 - RAMJobStore initialized.
+18:50:44,363  INFO QuartzScheduler:244 - Scheduler meta-data: Quartz Scheduler (v1.8.4) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+18:50:44,364  INFO StdSchedulerFactory:1280 - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+18:50:44,364  INFO StdSchedulerFactory:1284 - Quartz scheduler version: 1.8.4
+18:50:44,375  INFO MainBmtNeracaHarian:33 - DEFAULT.BmtAccountTaskJob Neraca Harian has been scheduled to run at: Tue Apr 25 18:52:00 ICT 2017 and repeat based on expression: 0 52 18 * * ? *
+18:50:47,602  INFO UpdateChecker:86 - New Quartz update(s) found: 1.8.5 [http://www.terracotta.org/kit/reflector?kitID=default&pageID=QuartzChangeLog]
+18:57:51,770  INFO SimpleThreadPool:270 - Job execution threads will use class loader of thread: main
+18:57:51,783  INFO SchedulerSignalerImpl:60 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+18:57:51,784  INFO QuartzScheduler:222 - Quartz Scheduler v.1.8.4 created.
+18:57:51,786  INFO RAMJobStore:139 - RAMJobStore initialized.
+18:57:51,787  INFO QuartzScheduler:244 - Scheduler meta-data: Quartz Scheduler (v1.8.4) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+18:57:51,787  INFO StdSchedulerFactory:1280 - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+18:57:51,787  INFO StdSchedulerFactory:1284 - Quartz scheduler version: 1.8.4
+18:57:51,797  INFO MainBmtNeracaHarian:34 - DEFAULT.BmtAccountTaskJob Neraca Harian has been scheduled to run at: Tue Apr 25 18:58:00 ICT 2017 and repeat based on expression: 0 58 18 * * ? *
+18:57:53,608  INFO UpdateChecker:86 - New Quartz update(s) found: 1.8.5 [http://www.terracotta.org/kit/reflector?kitID=default&pageID=QuartzChangeLog]
+19:00:39,508  INFO SimpleThreadPool:270 - Job execution threads will use class loader of thread: main
+19:00:39,524  INFO SchedulerSignalerImpl:60 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+19:00:39,526  INFO QuartzScheduler:222 - Quartz Scheduler v.1.8.4 created.
+19:00:39,529  INFO RAMJobStore:139 - RAMJobStore initialized.
+19:00:39,530  INFO QuartzScheduler:244 - Scheduler meta-data: Quartz Scheduler (v1.8.4) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+19:00:39,531  INFO StdSchedulerFactory:1280 - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+19:00:39,531  INFO StdSchedulerFactory:1284 - Quartz scheduler version: 1.8.4
+19:00:39,541  INFO MainBmtNeracaHarian:34 - DEFAULT.BmtAccountTaskJob Neraca Harian has been scheduled to run at: Wed Apr 26 18:58:00 ICT 2017 and repeat based on expression: 0 58 18 * * ? *
+19:00:41,304  INFO UpdateChecker:86 - New Quartz update(s) found: 1.8.5 [http://www.terracotta.org/kit/reflector?kitID=default&pageID=QuartzChangeLog]
+19:01:16,804  INFO SimpleThreadPool:270 - Job execution threads will use class loader of thread: main
+19:01:16,817  INFO SchedulerSignalerImpl:60 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+19:01:16,818  INFO QuartzScheduler:222 - Quartz Scheduler v.1.8.4 created.
+19:01:16,821  INFO RAMJobStore:139 - RAMJobStore initialized.
+19:01:16,821  INFO QuartzScheduler:244 - Scheduler meta-data: Quartz Scheduler (v1.8.4) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+19:01:16,821  INFO StdSchedulerFactory:1280 - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+19:01:16,822  INFO StdSchedulerFactory:1284 - Quartz scheduler version: 1.8.4
+19:01:16,830  INFO MainBmtNeracaHarian:34 - DEFAULT.BmtAccountTaskJob Neraca Harian has been scheduled to run at: Tue Apr 25 19:02:00 ICT 2017 and repeat based on expression: 0 0/1 * 1/1 * ? *
+19:03:45,910  INFO SimpleThreadPool:270 - Job execution threads will use class loader of thread: main
+19:03:45,928  INFO SchedulerSignalerImpl:60 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+19:03:45,929  INFO QuartzScheduler:222 - Quartz Scheduler v.1.8.4 created.
+19:03:45,932  INFO RAMJobStore:139 - RAMJobStore initialized.
+19:03:45,933  INFO QuartzScheduler:244 - Scheduler meta-data: Quartz Scheduler (v1.8.4) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+19:03:45,933  INFO StdSchedulerFactory:1280 - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+19:03:45,934  INFO StdSchedulerFactory:1284 - Quartz scheduler version: 1.8.4
+19:03:45,941  INFO QuartzScheduler:500 - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+19:03:45,943  INFO MainBmtNeracaHarian:35 - DEFAULT.BmtAccountTaskJob Neraca Harian has been scheduled to run at: Tue Apr 25 19:04:00 ICT 2017 and repeat based on expression: 0 0/1 * 1/1 * ? *
+19:03:50,335  INFO UpdateChecker:86 - New Quartz update(s) found: 1.8.5 [http://www.terracotta.org/kit/reflector?kitID=default&pageID=QuartzChangeLog]
+19:05:56,573  INFO SimpleThreadPool:270 - Job execution threads will use class loader of thread: main
+19:05:56,586  INFO SchedulerSignalerImpl:60 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+19:05:56,587  INFO QuartzScheduler:222 - Quartz Scheduler v.1.8.4 created.
+19:05:56,589  INFO RAMJobStore:139 - RAMJobStore initialized.
+19:05:56,590  INFO QuartzScheduler:244 - Scheduler meta-data: Quartz Scheduler (v1.8.4) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+19:05:56,590  INFO StdSchedulerFactory:1280 - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+19:05:56,590  INFO StdSchedulerFactory:1284 - Quartz scheduler version: 1.8.4
+19:05:56,599  INFO MainBmtNeracaHarian:35 - DEFAULT.BmtAccountTaskJob Neraca Harian has been scheduled to run at: Tue Apr 25 19:06:00 ICT 2017 and repeat based on expression: 0 0/1 * 1/1 * ? *
+19:05:56,599  INFO QuartzScheduler:500 - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+19:05:58,627  INFO UpdateChecker:86 - New Quartz update(s) found: 1.8.5 [http://www.terracotta.org/kit/reflector?kitID=default&pageID=QuartzChangeLog]
+19:12:15,996  INFO SimpleThreadPool:270 - Job execution threads will use class loader of thread: main
+19:12:16,009  INFO SchedulerSignalerImpl:60 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+19:12:16,010  INFO QuartzScheduler:222 - Quartz Scheduler v.1.8.4 created.
+19:12:16,013  INFO RAMJobStore:139 - RAMJobStore initialized.
+19:12:16,013  INFO QuartzScheduler:244 - Scheduler meta-data: Quartz Scheduler (v1.8.4) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+19:12:16,014  INFO StdSchedulerFactory:1280 - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+19:12:16,014  INFO StdSchedulerFactory:1284 - Quartz scheduler version: 1.8.4
+19:12:16,022  INFO MainBmtNeracaHarian:35 - DEFAULT.BmtAccountTaskJob Neraca Harian has been scheduled to run at: Tue Apr 25 19:13:00 ICT 2017 and repeat based on expression: 0 0/1 * 1/1 * ? *
+19:12:16,023  INFO QuartzScheduler:500 - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+19:12:18,248  INFO UpdateChecker:86 - New Quartz update(s) found: 1.8.5 [http://www.terracotta.org/kit/reflector?kitID=default&pageID=QuartzChangeLog]
+19:13:57,059  INFO SimpleThreadPool:270 - Job execution threads will use class loader of thread: main
+19:13:57,072  INFO SchedulerSignalerImpl:60 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+19:13:57,073  INFO QuartzScheduler:222 - Quartz Scheduler v.1.8.4 created.
+19:13:57,075  INFO RAMJobStore:139 - RAMJobStore initialized.
+19:13:57,076  INFO QuartzScheduler:244 - Scheduler meta-data: Quartz Scheduler (v1.8.4) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+19:13:57,076  INFO StdSchedulerFactory:1280 - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+19:13:57,076  INFO StdSchedulerFactory:1284 - Quartz scheduler version: 1.8.4
+19:13:57,085  INFO MainBmtNeracaHarian:35 - DEFAULT.BmtAccountTaskJob Neraca Harian has been scheduled to run at: Tue Apr 25 19:14:00 ICT 2017 and repeat based on expression: 0 0/1 * 1/1 * ? *
+19:13:57,085  INFO QuartzScheduler:500 - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+19:14:00,006  INFO Accounting:21 - Starting Get Neraca Harian at Tue Apr 25 19:14:00 ICT 2017
+19:14:00,051  INFO UpdateChecker:86 - New Quartz update(s) found: 1.8.5 [http://www.terracotta.org/kit/reflector?kitID=default&pageID=QuartzChangeLog]
+19:14:00,568  INFO DBUtil:164 - Run Query countReportPerkiraan :com.mysql.jdbc.JDBC4PreparedStatement@7426dbec: select count(*) as total from rep_neraca_harian_temp where dtm = '2017-04-25'
+19:14:00,667  INFO DBUtil:137 - Run Query Ins_report_perkiran : com.mysql.jdbc.JDBC4PreparedStatement@6076ab2f: insert into rep_neraca_harian_temp (kode_perk,kode_induk,type_perk,id_perk,id_induk,level_perk,g_or_d,dtm,d_or_k)  select kode_perk,kode_induk,type_perk,id_perk,id_induk,level_perk,g_or_d,'2017-04-25',d_or_k from perkiraan order by kode_perk
+19:14:00,779  INFO DBUtil:325 - Run Query Perkiraan_by_gord com.mysql.jdbc.JDBC4PreparedStatement@1c5dd582: SELECT KODE_PERK, ID_PERK, TYPE_PERK, LEVEL_PERK,D_OR_K from rep_neraca_harian_temp  WHERE dtm = '2017-04-25' AND G_OR_D='D' AND flag ='0'
+19:14:00,792  INFO Accounting:37 - Jumlah List Perkiraan_by_gord : 129
+19:14:00,793  INFO Accounting:40 - List Ke 1
+19:14:00,794  INFO Accounting:42 - trxid : 2017042505311277495744
+19:14:00,890  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@16df1832: call Neraca_harian_saldo_dk('10101','2017-04-25')
+19:14:01,493  INFO Accounting:46 - Success Running Saldo_dk | OK
+19:14:01,494  INFO Accounting:50 - End Of List ke 1
+19:14:01,494  INFO Accounting:40 - List Ke 2
+19:14:01,494  INFO Accounting:42 - trxid : 2017042505311277495744
+19:14:01,592  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@42e020c9: call Neraca_harian_saldo_dk('10102','2017-04-25')
+19:14:01,681  INFO Accounting:46 - Success Running Saldo_dk | OK
+19:14:01,681  INFO Accounting:50 - End Of List ke 2
+19:14:01,681  INFO Accounting:40 - List Ke 3
+19:14:01,681  INFO Accounting:42 - trxid : 2017042505311277495744
+19:14:02,144  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@1c5d9084: call Neraca_harian_saldo_dk('10201','2017-04-25')
+19:14:02,229  INFO Accounting:46 - Success Running Saldo_dk | OK
+19:14:02,229  INFO Accounting:50 - End Of List ke 3
+19:14:02,229  INFO Accounting:40 - List Ke 4
+19:14:02,229  INFO Accounting:42 - trxid : 2017042505311277495744
+19:14:03,629  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@4cb9e45a: call Neraca_harian_saldo_dk('10202','2017-04-25')
+19:14:03,779  INFO Accounting:46 - Success Running Saldo_dk | OK
+19:14:03,780  INFO Accounting:50 - End Of List ke 4
+19:14:03,780  INFO Accounting:40 - List Ke 5
+19:14:03,780  INFO Accounting:42 - trxid : 2017042505311277495744
+19:14:04,428  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@62da3a1e: call Neraca_harian_saldo_dk('10203','2017-04-25')
+19:14:04,593  INFO Accounting:46 - Success Running Saldo_dk | OK
+19:14:04,593  INFO Accounting:50 - End Of List ke 5
+19:14:04,593  INFO Accounting:40 - List Ke 6
+19:14:04,593  INFO Accounting:42 - trxid : 2017042505311277495744
+19:14:05,038  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@2e297ffb: call Neraca_harian_saldo_dk('10204','2017-04-25')
+19:14:05,125  INFO Accounting:46 - Success Running Saldo_dk | OK
+19:14:05,125  INFO Accounting:50 - End Of List ke 6
+19:14:05,125  INFO Accounting:40 - List Ke 7
+19:14:05,125  INFO Accounting:42 - trxid : 2017042505311277495744
+19:14:05,231  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@2f8a49e0: call Neraca_harian_saldo_dk('10205','2017-04-25')
+19:14:05,316  INFO Accounting:46 - Success Running Saldo_dk | OK
+19:14:05,316  INFO Accounting:50 - End Of List ke 7
+19:14:05,316  INFO Accounting:40 - List Ke 8
+19:14:05,316  INFO Accounting:42 - trxid : 2017042505311277495744
+19:14:05,706  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@54520eb: call Neraca_harian_saldo_dk('10206','2017-04-25')
+19:14:05,792  INFO Accounting:46 - Success Running Saldo_dk | OK
+19:14:05,793  INFO Accounting:50 - End Of List ke 8
+19:14:05,793  INFO Accounting:40 - List Ke 9
+19:14:05,793  INFO Accounting:42 - trxid : 2017042505311277495744
+19:21:41,012  INFO SimpleThreadPool:270 - Job execution threads will use class loader of thread: main
+19:21:41,025  INFO SchedulerSignalerImpl:60 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+19:21:41,026  INFO QuartzScheduler:222 - Quartz Scheduler v.1.8.4 created.
+19:21:41,028  INFO RAMJobStore:139 - RAMJobStore initialized.
+19:21:41,029  INFO QuartzScheduler:244 - Scheduler meta-data: Quartz Scheduler (v1.8.4) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+19:21:41,029  INFO StdSchedulerFactory:1280 - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+19:21:41,029  INFO StdSchedulerFactory:1284 - Quartz scheduler version: 1.8.4
+19:21:41,038  INFO MainBmtNeracaHarian:35 - DEFAULT.BmtAccountTaskJob Neraca Harian has been scheduled to run at: Tue Apr 25 19:22:00 ICT 2017 and repeat based on expression: 0 0/1 * 1/1 * ? *
+19:21:41,038  INFO QuartzScheduler:500 - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+19:21:42,812  INFO UpdateChecker:86 - New Quartz update(s) found: 1.8.5 [http://www.terracotta.org/kit/reflector?kitID=default&pageID=QuartzChangeLog]

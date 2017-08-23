@@ -18,6 +18,7 @@ public class Accounting {
 	static Logger log = Logger.getLogger(Accounting.class);
 
 	public static void getNeracaHarian() {
+		log.info("Starting Get Neraca Harian at "+new Date());
 		String transid = trxId();
 		Date currentDate = new Date();
 		DBUtil dbUtil = new DBUtil();

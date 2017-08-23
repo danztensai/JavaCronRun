@@ -1,0 +1,191 @@
+20:15:44,081  INFO DBUtil:164 - Run Query countReportPerkiraan :com.mysql.jdbc.JDBC4PreparedStatement@58ecb281: select count(*) as total from rep_neraca_harian_temp where dtm = '2017-04-21'
+20:15:44,190  INFO DBUtil:325 - Run Query Perkiraan_by_gord com.mysql.jdbc.JDBC4PreparedStatement@6719dc16: SELECT KODE_PERK, ID_PERK, TYPE_PERK, LEVEL_PERK,D_OR_K from rep_neraca_harian_temp  WHERE dtm = '2017-04-21' AND G_OR_D='D' AND flag ='0'
+20:15:44,202  INFO Accounting:36 - Jumlah List Perkiraan_by_gord : 132
+20:15:44,203  INFO Accounting:39 - List Ke 1
+20:15:44,203  INFO Accounting:41 - trxid : 2017042189929023030622
+20:15:44,304  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@73901437: call Neraca_harian_saldo_dk(null,'2017-04-21')
+20:15:44,371  INFO Accounting:45 - Success Running Saldo_dk | OK
+20:15:44,371  INFO Accounting:49 - End Of List ke 1
+20:15:44,371  INFO Accounting:39 - List Ke 2
+20:15:44,372  INFO Accounting:41 - trxid : 2017042189929023030622
+20:15:44,457  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@214a55f2: call Neraca_harian_saldo_dk(null,'2017-04-21')
+20:15:44,524  INFO Accounting:45 - Success Running Saldo_dk | OK
+20:15:44,524  INFO Accounting:49 - End Of List ke 2
+20:15:44,524  INFO Accounting:39 - List Ke 3
+20:15:44,525  INFO Accounting:41 - trxid : 2017042189929023030622
+20:15:44,614  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@7745c859: call Neraca_harian_saldo_dk(null,'2017-04-21')
+20:15:44,680  INFO Accounting:45 - Success Running Saldo_dk | OK
+20:15:44,680  INFO Accounting:49 - End Of List ke 3
+20:15:44,680  INFO Accounting:39 - List Ke 4
+20:15:44,680  INFO Accounting:41 - trxid : 2017042189929023030622
+20:15:44,773  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@5c07f4ec: call Neraca_harian_saldo_dk(null,'2017-04-21')
+20:15:44,836  INFO Accounting:45 - Success Running Saldo_dk | OK
+20:15:44,836  INFO Accounting:49 - End Of List ke 4
+20:15:44,836  INFO Accounting:39 - List Ke 5
+20:15:44,836  INFO Accounting:41 - trxid : 2017042189929023030622
+20:15:44,924  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@3882764b: call Neraca_harian_saldo_dk(null,'2017-04-21')
+20:15:44,986  INFO Accounting:45 - Success Running Saldo_dk | OK
+20:15:44,986  INFO Accounting:49 - End Of List ke 5
+20:15:44,986  INFO Accounting:39 - List Ke 6
+20:15:44,986  INFO Accounting:41 - trxid : 2017042189929023030622
+20:15:45,077  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@62f47396: call Neraca_harian_saldo_dk(null,'2017-04-21')
+20:15:45,142  INFO Accounting:45 - Success Running Saldo_dk | OK
+20:15:45,142  INFO Accounting:49 - End Of List ke 6
+20:15:45,142  INFO Accounting:39 - List Ke 7
+20:15:45,142  INFO Accounting:41 - trxid : 2017042189929023030622
+20:15:45,239  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@24f9fdc: call Neraca_harian_saldo_dk(null,'2017-04-21')
+20:15:45,305  INFO Accounting:45 - Success Running Saldo_dk | OK
+20:15:45,306  INFO Accounting:49 - End Of List ke 7
+20:15:45,306  INFO Accounting:39 - List Ke 8
+20:15:45,306  INFO Accounting:41 - trxid : 2017042189929023030622
+20:15:45,392  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@6542bece: call Neraca_harian_saldo_dk(null,'2017-04-21')
+20:15:45,454  INFO Accounting:45 - Success Running Saldo_dk | OK
+20:15:45,454  INFO Accounting:49 - End Of List ke 8
+20:15:45,454  INFO Accounting:39 - List Ke 9
+20:15:45,455  INFO Accounting:41 - trxid : 2017042189929023030622
+20:15:45,547  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@8f0c85e: call Neraca_harian_saldo_dk(null,'2017-04-21')
+20:15:45,611  INFO Accounting:45 - Success Running Saldo_dk | OK
+20:15:45,611  INFO Accounting:49 - End Of List ke 9
+20:15:45,611  INFO Accounting:39 - List Ke 10
+20:15:45,611  INFO Accounting:41 - trxid : 2017042189929023030622
+20:15:45,702  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@2c19e15c: call Neraca_harian_saldo_dk(null,'2017-04-21')
+20:15:45,766  INFO Accounting:45 - Success Running Saldo_dk | OK
+20:15:45,766  INFO Accounting:49 - End Of List ke 10
+20:15:45,766  INFO Accounting:39 - List Ke 11
+20:15:45,766  INFO Accounting:41 - trxid : 2017042189929023030622
+20:15:45,854  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@21b64e6a: call Neraca_harian_saldo_dk(null,'2017-04-21')
+20:15:45,918  INFO Accounting:45 - Success Running Saldo_dk | OK
+20:15:45,918  INFO Accounting:49 - End Of List ke 11
+20:15:45,918  INFO Accounting:39 - List Ke 12
+20:15:45,918  INFO Accounting:41 - trxid : 2017042189929023030622
+20:15:46,007  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@335856a5: call Neraca_harian_saldo_dk(null,'2017-04-21')
+20:15:46,071  INFO Accounting:45 - Success Running Saldo_dk | OK
+20:15:46,071  INFO Accounting:49 - End Of List ke 12
+20:15:46,071  INFO Accounting:39 - List Ke 13
+20:15:46,071  INFO Accounting:41 - trxid : 2017042189929023030622
+20:15:46,156  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@7786df0f: call Neraca_harian_saldo_dk(null,'2017-04-21')
+20:15:46,224  INFO Accounting:45 - Success Running Saldo_dk | OK
+20:15:46,224  INFO Accounting:49 - End Of List ke 13
+20:15:46,224  INFO Accounting:39 - List Ke 14
+20:15:46,224  INFO Accounting:41 - trxid : 2017042189929023030622
+20:15:46,317  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@6ba7508a: call Neraca_harian_saldo_dk(null,'2017-04-21')
+20:15:46,381  INFO Accounting:45 - Success Running Saldo_dk | OK
+20:15:46,381  INFO Accounting:49 - End Of List ke 14
+20:15:46,381  INFO Accounting:39 - List Ke 15
+20:15:46,381  INFO Accounting:41 - trxid : 2017042189929023030622
+20:15:46,483  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@a19b1de: call Neraca_harian_saldo_dk(null,'2017-04-21')
+20:15:46,548  INFO Accounting:45 - Success Running Saldo_dk | OK
+20:15:46,548  INFO Accounting:49 - End Of List ke 15
+20:15:46,548  INFO Accounting:39 - List Ke 16
+20:15:46,548  INFO Accounting:41 - trxid : 2017042189929023030622
+20:15:46,642  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@7426dbec: call Neraca_harian_saldo_dk(null,'2017-04-21')
+20:15:46,707  INFO Accounting:45 - Success Running Saldo_dk | OK
+20:15:46,707  INFO Accounting:49 - End Of List ke 16
+20:15:46,707  INFO Accounting:39 - List Ke 17
+20:15:46,707  INFO Accounting:41 - trxid : 2017042189929023030622
+20:15:46,800  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@67d95492: call Neraca_harian_saldo_dk(null,'2017-04-21')
+20:15:46,864  INFO Accounting:45 - Success Running Saldo_dk | OK
+20:15:46,864  INFO Accounting:49 - End Of List ke 17
+20:15:46,864  INFO Accounting:39 - List Ke 18
+20:15:46,864  INFO Accounting:41 - trxid : 2017042189929023030622
+20:15:46,956  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@26b4e29b: call Neraca_harian_saldo_dk(null,'2017-04-21')
+20:15:47,021  INFO Accounting:45 - Success Running Saldo_dk | OK
+20:15:47,021  INFO Accounting:49 - End Of List ke 18
+20:15:47,021  INFO Accounting:39 - List Ke 19
+20:15:47,021  INFO Accounting:41 - trxid : 2017042189929023030622
+20:15:47,107  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@f2a55aa: call Neraca_harian_saldo_dk(null,'2017-04-21')
+20:15:47,171  INFO Accounting:45 - Success Running Saldo_dk | OK
+20:15:47,171  INFO Accounting:49 - End Of List ke 19
+20:15:47,171  INFO Accounting:39 - List Ke 20
+20:15:47,171  INFO Accounting:41 - trxid : 2017042189929023030622
+20:15:47,274  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@3479e304: call Neraca_harian_saldo_dk(null,'2017-04-21')
+20:15:47,337  INFO Accounting:45 - Success Running Saldo_dk | OK
+20:15:47,338  INFO Accounting:49 - End Of List ke 20
+20:15:47,338  INFO Accounting:39 - List Ke 21
+20:15:47,338  INFO Accounting:41 - trxid : 2017042189929023030622
+20:15:47,426  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@2bd1e730: call Neraca_harian_saldo_dk(null,'2017-04-21')
+20:15:47,493  INFO Accounting:45 - Success Running Saldo_dk | OK
+20:15:47,493  INFO Accounting:49 - End Of List ke 21
+20:15:47,493  INFO Accounting:39 - List Ke 22
+20:15:47,493  INFO Accounting:41 - trxid : 2017042189929023030622
+20:15:47,577  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@d576e70: call Neraca_harian_saldo_dk(null,'2017-04-21')
+20:15:47,643  INFO Accounting:45 - Success Running Saldo_dk | OK
+20:15:47,643  INFO Accounting:49 - End Of List ke 22
+20:15:47,643  INFO Accounting:39 - List Ke 23
+20:15:47,643  INFO Accounting:41 - trxid : 2017042189929023030622
+20:15:47,731  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@9d7fbfb: call Neraca_harian_saldo_dk(null,'2017-04-21')
+20:15:47,800  INFO Accounting:45 - Success Running Saldo_dk | OK
+20:15:47,800  INFO Accounting:49 - End Of List ke 23
+20:15:47,800  INFO Accounting:39 - List Ke 24
+20:15:47,800  INFO Accounting:41 - trxid : 2017042189929023030622
+20:15:47,884  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@1c5d9084: call Neraca_harian_saldo_dk(null,'2017-04-21')
+20:15:47,949  INFO Accounting:45 - Success Running Saldo_dk | OK
+20:15:47,949  INFO Accounting:49 - End Of List ke 24
+20:15:47,950  INFO Accounting:39 - List Ke 25
+20:15:47,950  INFO Accounting:41 - trxid : 2017042189929023030622
+20:15:48,035  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@4104c575: call Neraca_harian_saldo_dk(null,'2017-04-21')
+20:15:48,098  INFO Accounting:45 - Success Running Saldo_dk | OK
+20:15:48,098  INFO Accounting:49 - End Of List ke 25
+20:15:48,098  INFO Accounting:39 - List Ke 26
+20:15:48,098  INFO Accounting:41 - trxid : 2017042189929023030622
+20:15:48,180  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@1de58cb8: call Neraca_harian_saldo_dk(null,'2017-04-21')
+20:15:48,250  INFO Accounting:45 - Success Running Saldo_dk | OK
+20:15:48,251  INFO Accounting:49 - End Of List ke 26
+20:15:48,251  INFO Accounting:39 - List Ke 27
+20:15:48,251  INFO Accounting:41 - trxid : 2017042189929023030622
+20:15:48,333  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@671ff436: call Neraca_harian_saldo_dk(null,'2017-04-21')
+20:15:48,397  INFO Accounting:45 - Success Running Saldo_dk | OK
+20:15:48,397  INFO Accounting:49 - End Of List ke 27
+20:15:48,398  INFO Accounting:39 - List Ke 28
+20:15:48,398  INFO Accounting:41 - trxid : 2017042189929023030622
+20:15:48,478  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@4a53fb57: call Neraca_harian_saldo_dk(null,'2017-04-21')
+20:15:48,542  INFO Accounting:45 - Success Running Saldo_dk | OK
+20:15:48,542  INFO Accounting:49 - End Of List ke 28
+20:15:48,542  INFO Accounting:39 - List Ke 29
+20:15:48,542  INFO Accounting:41 - trxid : 2017042189929023030622
+20:16:14,829  INFO DBUtil:164 - Run Query countReportPerkiraan :com.mysql.jdbc.JDBC4PreparedStatement@21a80a69: select count(*) as total from rep_neraca_harian_temp where dtm = '2017-04-21'
+20:16:14,927  INFO DBUtil:325 - Run Query Perkiraan_by_gord com.mysql.jdbc.JDBC4PreparedStatement@3d9360e2: SELECT KODE_PERK, ID_PERK, TYPE_PERK, LEVEL_PERK,D_OR_K from rep_neraca_harian_temp  WHERE dtm = '2017-04-21' AND G_OR_D='D' AND flag ='0'
+20:16:14,940  INFO Accounting:36 - Jumlah List Perkiraan_by_gord : 132
+20:16:14,940  INFO Accounting:39 - List Ke 1
+20:16:14,940  INFO Accounting:41 - trxid : 2017042178421190915164
+20:16:15,028  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@11bbf1ca: call Neraca_harian_saldo_dk('10102','2017-04-21')
+20:16:15,118  INFO Accounting:45 - Success Running Saldo_dk | OK
+20:16:15,118  INFO Accounting:49 - End Of List ke 1
+20:16:15,118  INFO Accounting:39 - List Ke 2
+20:16:15,118  INFO Accounting:41 - trxid : 2017042178421190915164
+20:16:15,209  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@2c79a2e7: call Neraca_harian_saldo_dk('10201','2017-04-21')
+20:16:15,294  INFO Accounting:45 - Success Running Saldo_dk | OK
+20:16:15,294  INFO Accounting:49 - End Of List ke 2
+20:16:15,294  INFO Accounting:39 - List Ke 3
+20:16:15,295  INFO Accounting:41 - trxid : 2017042178421190915164
+20:16:15,398  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@58d9660d: call Neraca_harian_saldo_dk('10202','2017-04-21')
+20:16:15,484  INFO Accounting:45 - Success Running Saldo_dk | OK
+20:16:15,484  INFO Accounting:49 - End Of List ke 3
+20:16:15,484  INFO Accounting:39 - List Ke 4
+20:16:15,484  INFO Accounting:41 - trxid : 2017042178421190915164
+20:16:15,576  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@ed42d08: call Neraca_harian_saldo_dk('10203','2017-04-21')
+20:16:15,661  INFO Accounting:45 - Success Running Saldo_dk | OK
+20:16:15,661  INFO Accounting:49 - End Of List ke 4
+20:16:15,661  INFO Accounting:39 - List Ke 5
+20:16:15,661  INFO Accounting:41 - trxid : 2017042178421190915164
+20:16:15,746  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@3882764b: call Neraca_harian_saldo_dk('10204','2017-04-21')
+20:16:15,829  INFO Accounting:45 - Success Running Saldo_dk | OK
+20:16:15,829  INFO Accounting:49 - End Of List ke 5
+20:16:15,829  INFO Accounting:39 - List Ke 6
+20:16:15,830  INFO Accounting:41 - trxid : 2017042178421190915164
+20:16:15,922  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@5f70bea5: call Neraca_harian_saldo_dk('10205','2017-04-21')
+20:16:16,006  INFO Accounting:45 - Success Running Saldo_dk | OK
+20:16:16,006  INFO Accounting:49 - End Of List ke 6
+20:16:16,006  INFO Accounting:39 - List Ke 7
+20:16:16,007  INFO Accounting:41 - trxid : 2017042178421190915164
+20:16:16,097  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@309cbd4b: call Neraca_harian_saldo_dk('10206','2017-04-21')
+20:16:16,188  INFO Accounting:45 - Success Running Saldo_dk | OK
+20:16:16,188  INFO Accounting:49 - End Of List ke 7
+20:16:16,188  INFO Accounting:39 - List Ke 8
+20:16:16,188  INFO Accounting:41 - trxid : 2017042178421190915164
+20:16:16,282  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@6bffc686: call Neraca_harian_saldo_dk('10207','2017-04-21')
+20:16:16,364  INFO Accounting:45 - Success Running Saldo_dk | OK
+20:16:16,364  INFO Accounting:49 - End Of List ke 8
+20:16:16,365  INFO Accounting:39 - List Ke 9
+20:16:16,365  INFO Accounting:41 - trxid : 2017042178421190915164
+20:16:16,460  INFO DBUtil:411 - Run Query Stored Procedure Neraca_harian_saldo_dk(?,?) : com.mysql.jdbc.JDBC4PreparedStatement@9a082e2: call Neraca_harian_saldo_dk('10301','2017-04-21')

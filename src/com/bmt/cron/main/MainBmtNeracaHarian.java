@@ -30,12 +30,18 @@ public class MainBmtNeracaHarian {
 			CronTrigger trigger = new CronTrigger("cronNeraca", "BTM", getProp.getCrontabSchedue());
 			Date ft = null;
 			ft = sched.scheduleJob(job,trigger);
+			
+			
 			log.info(String.valueOf(job.getFullName()) + " has been scheduled to run at: " + ft + " and repeat based on expression: " + trigger.getCronExpression());
+			sched.start();
 		} catch (SchedulerException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}catch(Exception e)
+		{
 			e.printStackTrace();
 		}
 	}

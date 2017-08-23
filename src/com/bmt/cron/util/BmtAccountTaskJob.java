@@ -13,13 +13,11 @@ public class BmtAccountTaskJob implements Job {
 	
 	@Override
 	public void execute(JobExecutionContext arg0) throws JobExecutionException {
-		// TODO Auto-generated method stub
-		run();
+		
+		Accounting.getNeracaHarian();
+		//System.out.println("FUCK MAN");
 	}
 	
-	public void run()
-	{
-		Accounting.getNeracaHarian();
-	}
+	
 
 }
